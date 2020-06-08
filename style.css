@@ -1,0 +1,567 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img, video, canvas {
+	max-width: 100%;
+}
+a {
+    text-decoration: none;
+}
+/* BORDER BOX */
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Default body styling */
+
+body {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 14px;
+    background-color: rgb(253, 252, 252);
+    color: #555;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+
+.top-nav {
+    display: flex;
+    background-color: #000;
+    padding: 8px 20px;
+}
+header li {
+    display: inline-block;
+    padding-right: 15px;
+    flex-shrink: 1;
+}
+.end li:last-child {
+    padding-right: 0;
+}
+header a {
+    color: #888;
+}
+.top-nav a:hover {
+    color: #fff;
+}
+.beg {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    
+}
+.end {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+.bottom-nav {
+    display: flex;
+    background-color: rgb(253, 252, 252);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+.bottom-nav a:hover {
+    color: #111;
+}
+.bottom-nav input {
+    height: 30px;
+    width: 100%;
+    background: url(images/search.png) no-repeat scroll 7px 7px;
+    background-size: 16px 16px;
+    padding-left:30px;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+.bottom-nav .end li:first-child {
+    width: 70%;
+}
+.register {
+    background-color: #0cc;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+    height: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+.join {
+    background-color: rgb(255, 203, 34);
+    color: #222;
+    padding: 5px 20px;
+    text-align: center;
+}
+
+/* Random Section */
+
+.random {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+    height: 70vh;
+}
+.random a {
+    color: #fff;
+}
+.random a:hover {
+    text-decoration: underline;
+}
+.random1 {
+    grid-row: 1 / -1;
+    background: url(images/random1.png) no-repeat scroll;
+    background-size: 100% 100%;
+}
+.random2 {
+    background: url(images/random2.jpg) no-repeat scroll;
+    background-size: 100% 100%;
+}
+.random3 {
+    background: url(images/random3.jpg) no-repeat scroll;
+    background-size: 100% 100%;
+}
+.random figure {
+    position: relative;
+}
+.random-wraper {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 14px;
+}
+.random1 h1 {
+    font-size: 3.5vw;
+    font-weight: bold;
+    line-height: 1;
+    width: 90%;
+}
+.random-wraper p {
+    color: #999;
+}
+.random3 h1 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    line-height: 1;
+    width: 90%;
+}
+.random2 h1 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    line-height: 1;
+    width: 90%;
+}
+
+/* News Section */
+
+.latest-news {
+    padding: 30px 0;
+}
+.news-container {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.news {
+    width: 90%;
+    margin: 0 auto;
+    color: #f42;
+    font: 700 28px/1.5 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    padding-bottom: 20px;
+}
+.latest-news a {
+    color: #000;
+}
+.news-container figure {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+.news-container img {
+    width: 100%;
+}
+.news-container h1 {
+    font-size: 100%;
+    line-height: 1;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.news-container p {
+    font-size: 12px;
+    color: #999;
+}
+.news-container p a {
+    color: #999;
+}
+.news-container h1 a:hover {
+    color: #f42;
+    text-decoration: underline;
+}
+.news-container p a:hover {
+    color: #222;
+}
+
+/* Categories Section */
+
+.categories {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.category {
+    display: flex;
+    flex-direction: column;
+}
+.category figure {
+    flex-basis: 250px;
+    font-size: 20px;
+    margin: 5px 0;
+    
+    position: relative;
+    color: #fff;
+}
+.cat-wrap {
+    position: absolute;
+    bottom: 10px;
+    padding: 0 20px;
+}
+.cat-wrap h4 {
+    font-size: 60%;
+    font-weight: 700;
+}
+.cat-wrap h3 {
+    line-height: 1;
+    width: 90%;
+    padding-top: 7px;
+}
+.cat-wrap h3 a {
+    color: #fff;
+    font-weight: bold;
+    
+}
+.cat-wrap h3 a:hover {
+    text-decoration: underline;
+}
+.cat-wrap p  {
+    font-size: 50%;
+    color: #aaa;
+    padding-top: 7px;
+}
+.cat-wrap p a {
+    color: #aaa;
+}
+.cat-wrap p a:hover {
+    text-decoration: underline;
+    color: #eee;
+}
+.category h1 a {
+    color: #f42;
+    font-size: 30px;
+    font-weight: bold;
+    
+}
+.category h1 a:hover {
+    color: #222;
+}
+.category li {
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    list-style: square;
+    padding: 5px 10px;
+}
+.category li a {
+    color: #666;
+}
+.category li a:hover {
+    color: #000;
+}
+.category1 {
+    background: url(images/cat1.jpg) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+.category2 {
+    background: url(images/cat2.png) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.6;
+}
+.category3 {
+    background: url(images/cat3.png) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+.category4 {
+    background: url(images/cat4.jpg) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+.category5 {
+    background: url(images/cat5.png) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+.category6 {
+    background: url(images/cat6.png) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+.category7 {
+    background: url(images/cat7.jpg) no-repeat scroll;
+    background-size: 100% 100%;
+    background: linear-gradient(#fff, #000);
+}
+.category8 {
+    background: url(images/cat8.jpg) no-repeat scroll;
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+
+/* Deals Section */
+
+.latest-deals {
+    width: 90%;
+    margin: 30px auto;
+    position: relative;
+}
+.latest-deals h2 {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.latest-deals h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.latest-deals a {
+    color: #f42;
+}
+.latest-deals a:hover {
+    color: #000;
+}
+.deals-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+.deals-container img {
+    width: 100%;
+    cursor: pointer;
+}
+.deals-container a  {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+.deals-container a:hover {
+    color: #f42;
+}
+.price {
+    display: flex;
+}
+.price h5 {
+    text-decoration: line-through;
+    padding-right: 8px;
+    color: #aaa;
+}
+.price h4 {
+    color: #222;
+    font-size: 16px;
+}
+
+
+
+/* Footer */
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #131313;
+    padding: 30px 0;
+}
+footer li {
+    display: inline-block;
+    padding: 5px 13px;
+}
+.social {
+    padding: 20px 0;
+}
+.social a {
+    color:#fff;
+    font-size: 20px;
+    
+}
+.social li {
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.social li:hover {
+    background-color: #000;
+    cursor: pointer;
+}
+.footer-nav {
+    padding-bottom: 20px;
+}
+.footer-nav li {
+    padding: 0 5px;
+}
+.footer-nav a {
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.footer-nav a:hover {
+    color: #fff;
+}
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000;
+    padding: 50px 0;
+    color: #aaa;
+    text-align: center;
+}
+.footer-bottom img {
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+/* Media 1024px */
+
+@media all and (max-width: 1024px) {
+    .news-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .categories {
+        grid-template-columns: 1fr 1fr;
+    }
+    .deals-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media 842px */
+
+@media all and (max-width: 842px) {
+    .beg,
+    .end {
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .register {
+        margin-top: 10px;
+    }
+    .end li:last-child {
+        padding-right: 20px;
+    }
+    .random {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        
+    }
+    .random1 {
+        grid-row: 1 / 2;
+    }
+    .random-wraper h1 {
+        font-size: 3vw;
+    }
+    
+}
+
+/* Media 720px */
+
+@media all and (max-width: 720px) {
+    .news-container {
+        grid-template-columns: 1fr;
+    }
+    .news-container figure {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        
+        gap: 10px;
+    }
+    .news-container img {
+        grid-row: 1 / span 2;
+        height: 100%;
+    }
+    .news-container h1 {
+        font-size: 80%;
+        line-height: 1;
+        font-weight: bold;
+        padding: 0;
+    }
+    .categories {
+        grid-template-columns: 1fr;
+    }
+    .deals-container {
+        grid-template-columns: 1fr;
+    }
+    .deals-container figure {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: 10px;
+    }
+    .deals-container img {
+        grid-row: 1 / span 2;
+        height: 100%;
+    }
+    .deals-container a {
+        font-size: 14px;
+    }
+}
